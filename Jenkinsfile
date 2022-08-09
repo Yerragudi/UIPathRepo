@@ -10,7 +10,7 @@ pipeline {
 	        UIPATH_ORCH_URL = "https://cloud.uipath.com/eitservicesindiaprivatelimited/"
 			UIPATH_ORCH_LOGICAL_NAME = "eitservicesindiaprivatelimited"
 			UIPATH_ORCH_TENANT_NAME = "DefaultTenant"
-			UIPATH_ORCH_FOLDER_NAME = "Default"
+			UIPATH_ORCH_FOLDER_NAME = "My Wrokspace"
 	    }
 	
 
@@ -61,8 +61,8 @@ pipeline {
                 orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
                 folderName: "${UIPATH_ORCH_FOLDER_NAME}",
                 environments: 'DEV',
-                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'), 
+                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'srividhya']
+                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'srividhya'), 
 				traceLevel: 'None',
 				entryPointPaths: 'Main.xaml'
 	
